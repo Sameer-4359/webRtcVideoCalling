@@ -35,7 +35,13 @@ const LobbyScreen = () => {
 
   return (
     <div className="lobby-container">
-      <h1>Video Call Lobby</h1>
+     <div className="lobby-header">
+    <img src="/BaatCheetLogo.jpg" alt="BaatCheet Logo" style={{ width: '150px', marginBottom: '20px' }} />
+    <h1>Video Call Lobby</h1>
+    <p>Enter your details to join a room</p>
+  </div>
+
+
       <form onSubmit={handleSubmitForm} className="lobby-form">
         <div className="form-group">
           <label htmlFor="email">Email ID</label>

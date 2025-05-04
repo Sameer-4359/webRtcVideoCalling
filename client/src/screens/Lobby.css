@@ -72,3 +72,8 @@
     background: #a0aec0;
     cursor: not-allowed;
   }
+  .lobby-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
