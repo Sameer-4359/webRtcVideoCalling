@@ -52,7 +52,7 @@ const [isAudioOn, setIsAudioOn] = useState(true);
     videoTrack.enabled = !videoTrack.enabled;
     setIsVideoOn(videoTrack.enabled);
     
-    // If turning off, also stop the track if we're not in a call
+    
     if (!videoTrack.enabled && !remoteSocketId) {
       videoTrack.stop();
     }

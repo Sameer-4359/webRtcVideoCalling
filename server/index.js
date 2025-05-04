@@ -5,13 +5,13 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
-// const authRoutes = require("./routes/authRoutes");
+
 const path = require("path");
 
-// Load environment variables
+
 dotenv.config();
 
-// Initialize Express app
+
 const app = express();
 const server = http.createServer(app);
 
@@ -24,9 +24,9 @@ app.use(express.json());
 
 // API Routes
 app.use("/api/users", userRoutes);
-// app.use("/api/auth", authRoutes);
 
-// Serve static assets in production
+
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
   app.get("*", (req, res) => {
@@ -76,9 +76,9 @@ io.on("connection", (socket) => {
   });
 
   socket.on("message:send", ({ room, message, email }) => {
-    // Broadcast to everyone in the room except the sender
+   
     socket.to(room).emit("message:receive", { message, email });
-    // Send back to sender with their own email for consistency
+    
     socket.emit("message:receive", { message, sender: "You" });
   });
 

@@ -44,14 +44,14 @@ const Signup = () => {
         throw new Error(data.message || "Signup failed");
       }
 
-      // Redirect to login page after successful signup
+     
       navigate("/login");
       // After successful signup:
 if (response.ok) {
   navigate("/login", { 
     state: { 
       fromSignup: true,
-      email: formData.email // Pre-fill email on login page
+      email: formData.email 
     } 
   });
 }

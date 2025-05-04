@@ -6,7 +6,7 @@ import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import PrivateRoute from "./conponents/PrivateRoute";
 import { AuthProvider } from "./context/AuthProvider";
-import { useAuth } from "./context/AuthProvider"; // Add this import
+import { useAuth } from "./context/AuthProvider"; 
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
   );
 }
 
-// New component to handle redirect logic
+
 function AuthRedirect() {
   const { isAuthenticated } = useAuth();
   
