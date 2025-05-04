@@ -180,7 +180,7 @@
     background: #3182ce;
   }
   
-  /* Responsive layout */
+
   @media (max-width: 768px) {
     .room-container {
       flex-direction: column;
@@ -201,3 +201,4 @@
       flex-direction: column;
     }
   }
+  
